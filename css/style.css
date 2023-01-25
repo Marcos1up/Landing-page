@@ -1,0 +1,141 @@
+* {
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Se pueden crear variables o "Custom Properties" */
+    --poppins: "Poppins", sans-serif;
+    --open-sans: "Open Sans", sans-serif;
+
+    --pink: hsl(322, 100%, 66%);
+    --light-pink: hsl(321, 100%, 78%);
+    --light-red: hsl(0, 100%, 63%);
+    --very-dark-cyan: hsl(192, 100%, 9%);
+    --very-pale-blue: hsl(207, 100%, 98%);
+
+    --padding-container: 60px 0 45px; /* ojo que no hay coma (cambia el padding suyo, y el de sus hijos)*/
+}
+
+body {
+    font-family: var(--open-sans);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto; /* ojo que no hay coma */
+    overflow: hidden;
+    padding: var(--padding-container);
+}
+
+.hero {
+    min-height: 100vh;
+    position: relative;
+    --wave-bottom: url("../images/bg-section-top-mobile-1.svg");
+}
+
+.hero__nav {
+    display: flex;
+    justify-content: space-between; /* pegarlo a las esquinas */
+    align-items: center;
+}
+
+.hero__logo {
+    width: 45%;
+    max-width: 160px;
+}
+
+.hero__huddle {
+    width: 100%;
+    display: block;
+}
+
+.hero__cta {
+    /* boton */
+    color: var(--light-pink);
+    text-decoration: none;
+    border: 2px solid;
+    padding: 6px 16px; /* el primero es para top y buttom, y el segundo para los costados */
+    border-radius: 30px;
+    font-weight: 600;
+    box-shadow: 0 0 1px;
+}
+
+.hero__main {
+    text-align: center;
+    color: var(--very-dark-cyan);
+}
+
+.hero__title {
+    font-family: var(--poppins);
+}
+
+.hero__paragraph {
+    width: 90%;
+    line-height: 1.5;
+    margin: 16px auto;
+}
+
+.cta {
+    /* boton */
+    display: inline-block;
+    background-color: var(--pink);
+    color: #fff;
+    text-decoration: none;
+    padding: 16px 30px;
+    border-radius: 30px;
+    padding-top: 16px;
+}
+
+.hero__picture {
+    margin-top: 80px;
+}
+
+.hero__img {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    display: block;
+}
+
+.hero__numbers {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 100px;
+    gap: 60px; /* agrega un espaciado entre los items */
+}
+
+.hero__item {
+    overflow: hidden;
+}
+
+.hero__number {
+    font-size: 60px;
+}
+
+.hero__icon {
+    display: block;
+}
+
+.wave {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    background-repeat: no-repeat;
+    background-size: 100% 100px;
+}
+
+.wave--bottom {
+    left: 0;
+    bottom: 0;
+    background-image: var(--wave-bottom);
+}
+
+.wave--top {
+    left: 0;
+    top: 0;
+    background-image: var(--wave-top);
+}
